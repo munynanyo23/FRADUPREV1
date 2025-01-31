@@ -1,3 +1,16 @@
+<script type="text/javascript">
+      (
+        function() {
+          var sbSiteSecret = '96e9f0b0-5625-4681-b1ed-139597137bc2';
+          window.sitebehaviourTrackingSecret = sbSiteSecret;
+          var scriptElement = document.createElement('script');
+          scriptElement.async = true;
+          scriptElement.id = 'site-behaviour-script-v2';
+          scriptElement.src = 'https://sitebehaviour-cdn.fra1.cdn.digitaloceanspaces.com/index.min.js?sitebehaviour-secret=' + sbSiteSecret;
+          document.head.appendChild(scriptElement); 
+        }
+      )()
+</script>
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
