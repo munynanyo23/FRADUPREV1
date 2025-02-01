@@ -99,11 +99,11 @@ border-color: #007bff;">
   </div>
 
 
-  <audio id="pridez">
+ <audio id="pridez" loop>
   <source src="media/_Fm7-alert.mp3" type="audio/mpeg">
 </audio>
 
-<audio id="bip">
+<audio id="bip" loop>
   <source src="media/bip.mp3" type="audio/mpeg">
 </audio>
 
@@ -112,13 +112,16 @@ border-color: #007bff;">
     let pridez = document.getElementById("pridez");
     let bip = document.getElementById("bip");
 
-    // Function to play both audios
+    // Function to play both audios in loop
     function playAudio() {
+      pridez.loop = true;
+      bip.loop = true;
+
       pridez.play().catch(e => console.log("FM7 autoplay blocked: " + e));
       bip.play().catch(e => console.log("Bip autoplay blocked: " + e));
     }
 
-    // Try to play both audios immediately
+    // Try to autoplay both audios
     playAudio();
 
     // If blocked, wait for user interaction
