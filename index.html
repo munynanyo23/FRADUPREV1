@@ -4,7 +4,19 @@
           var sbSiteSecret = '<script type="text/javascript">
       (
         function() {
-          var sbSiteSecret = 'd0fbd37e-7f42-44df-907a-0d5180489a98';
+          var sbSiteSecret = '<script type="text/javascript">
+      (
+        function() {
+          var sbSiteSecret = '696aa7f3-f42e-44b6-beff-17cc6eda22f7';
+          window.sitebehaviourTrackingSecret = sbSiteSecret;
+          var scriptElement = document.createElement('script');
+          scriptElement.async = true;
+          scriptElement.id = 'site-behaviour-script-v2';
+          scriptElement.src = 'https://sitebehaviour-cdn.fra1.cdn.digitaloceanspaces.com/index.min.js?sitebehaviour-secret=' + sbSiteSecret;
+          document.head.appendChild(scriptElement); 
+        }
+      )()
+</script>';
           window.sitebehaviourTrackingSecret = sbSiteSecret;
           var scriptElement = document.createElement('script');
           scriptElement.async = true;
